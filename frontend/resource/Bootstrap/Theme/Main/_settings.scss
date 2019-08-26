@@ -1,0 +1,54 @@
+$border-width:                1px !default;
+
+//@import '/fonts/Roboto/fonts.css';
+
+$font-family-sans-serif:      'Roboto' !default;
+//$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+
+$font-size-base:              1rem !default;
+//$font-size-lg:                ($font-size-base * 1.25) !default;
+//$font-size-sm:                ($font-size-base * .875) !default;
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            500 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.75 !default;
+
+
+$h1-font-size:                36px !default;
+$h2-font-size:                28px !default;
+$h3-font-size:                24px !default;
+$h4-font-size:                20px !default;
+$h5-font-size:                16px !default;
+$h6-font-size:                $font-size-base !default;
+
+$enable-caret:              true !default;
+$enable-rounded:            true !default;
+$enable-shadows:            false !default;
+$enable-gradients:          false !default;
+$enable-transitions:        true !default;
+$enable-hover-media-query:  false !default; // Deprecated, no longer affects any compiled CSS
+$enable-grid-classes:       true !default;
+$enable-print-styles:       true !default;
+
+$sideNavBarWidth: 250px;
+$headerHeight: 180px;
+
+$btn-font-weight: $font-weight-light;
+$btn-border-radius: 0.25em;
+
+//$table-bg:                    transparent !default;
+$table-accent-bg:               #f8f8f8 !default;
+//$table-hover-bg:              rgba($black, .075) !default;
+//$table-active-bg:             $table-hover-bg !default;
+//$table-border-width:          $border-width !default;
+//$table-border-color:          $gray-300 !default;
+
+$custom-file-text: (
+        en: "Выберите файл",
+);
+
+$modal-lg:                          980px;

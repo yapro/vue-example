@@ -1,0 +1,50 @@
+/* ----------- цвета ------------ */
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900:    #212529 !default;
+$pizazz:      #ff8c00 !default;
+$gold-drop:   #F17600 !default;
+$black:       #000 !default;
+$silver:      #bfbebe !default;
+
+
+$blue:        #018fcb !default;
+//$indigo:    #6610f2 !default;
+//$purple:    #6f42c1 !default;
+$pink:        #ffc5c5 !default;
+$red:         #e94444 !default;
+$orange:      #ed8b00 !default;
+//$yellow:    #ffc107 !default;
+$green:       #06ae5f !default;
+$teal:        #037fb3 !default;
+//$cyan:        #b8e3f5 !default;
+$cyan:        #8bc0d4 !default;
+$aqua:        #18C4CF !default;
+$citron:      #8BAF29 !default;
+
+$primary:     $green !default;
+$secondary:   $gray-600 !default;
+$success:     $citron !default;
+$info:        $cyan !default;
+$warning:     $orange !default;
+$danger:      $red !default;
+//$light:         $gray-100 !default;
+//$dark:          $gray-800 !default;
+
+
+$body-bg:     $white !default;
+//$body-color:                $gray-900 !default;
+
+//$link-color:                theme-color("primary") !default;
+//$link-hover-color:          darken($link-color, 15%) !default;
+
+//$border-color:                $gray-300 !default;
+

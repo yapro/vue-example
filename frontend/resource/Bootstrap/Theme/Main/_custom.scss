@@ -1,0 +1,304 @@
+//@import '/fonts/gemotest_icons_2018/style.css';
+//@import 'www/fonts/gemotest_icons_2018/gs-icons.scss';
+//@import '/fonts/font-awesome-4.7.0/css/font-awesome.min.css';
+
+/* ---- Overrided standart tags ---- */
+h1,h2,h3,h4,h5,h6 {
+  font-weight: $font-weight-light;
+  line-height: 1em;
+  margin-bottom: 0;
+}
+p,span,i,div,td,th {
+  font-weight: $font-weight-light;
+}
+
+
+
+/* ---- Overrided bootstrap classes ---- */
+.alert-warning {
+  color: $gold-drop;
+}
+.btn-warning {
+  color: $white;
+}
+.btn-warning.disabled {
+  color: $white;
+}
+
+
+.alert-info {
+  background-color: $info;
+  border-color: $info;
+  color: #ffffff;
+}
+
+$collapseAnimationTime: 0.3s;
+
+
+/* ------- Additional classes ----------- */
+
+#page-container {
+  transition: width $collapseAnimationTime linear;
+  .page-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all $collapseAnimationTime linear;
+    width: calc(100% - #{$sideNavBarWidth});
+    min-height: 100vh;
+    padding-bottom: 50px;
+
+    header {
+      width: 100%;
+      height: $headerHeight;
+      max-height: $headerHeight;
+      overflow: hidden;
+      img.header-banner {
+        max-height: $headerHeight;
+        height: $headerHeight;
+      }
+    }
+
+    // --- Navigation panel
+    .side-nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: $sideNavBarWidth;
+      transition: width $collapseAnimationTime linear;
+      height: 100%;
+      text-align: left;
+      z-index: 999;
+      overflow-y: auto;
+      border-right: 1px solid #dee2e6;
+      box-sizing: content-box;
+
+      .gemotest-logo {
+        width: #{$sideNavBarWidth};
+        transition: all $collapseAnimationTime linear;
+        a {
+          background-image: url('/img/logo-250x180.png');
+          width: inherit;
+          height: $headerHeight;
+          display: block;
+        }
+      }
+    }
+  }
+  &.collapsed {
+    width: calc(100% - 150px);
+    .page-wrapper {
+      width: calc(100% - 50px);
+      .side-nav-bar {
+        width: 50px;
+        background-color: $primary;
+        .gemotest-logo {
+          margin-left: -10px;
+          width: 60px;
+        }
+        .main-menu {
+          .menu-item {
+            height: 50px;
+            /*color: $primary;*/
+            a.nav-link, a.nav-link.text-secondary {
+              /*white-space: nowrap;*/
+              /*color: $primary;*/
+            }
+            span {
+              font-size: 1.7rem;
+              margin-right: 10em;
+              color: $white;
+            }
+            &.bg-warning {
+              a.nav-link {
+                padding-top: 13px;
+              }
+            }
+            .submenu {
+              margin-left: 10em;
+            }
+          }
+          .burger-container {
+            position: relative;
+            margin-top: 50px;
+            .btn-burger {
+              position: absolute;
+              left: 17px;
+              top: -35px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.user-avatar {
+  height: 100%;
+}
+
+.page-actions {
+  @extend .clearfix;
+  button {
+    width: 267px;
+    height: 57px;
+    font-size: $font-size-base + .1rem;
+    line-height: 27px;
+    &.btn-next {
+      @extend .btn-lg;
+      @extend .float-right;
+      font-size: $font-size-base + .1rem;
+      &:after {
+        font-size: #{$font-size-base};
+        font-family: 'FontAwesome';
+        content: "\f105";
+        display: block;
+        float: right;
+        margin-left: -12px;
+      }
+    }
+    &.btn-back {
+      @extend .btn-outline-secondary;
+      @extend .btn-lg;
+      @extend .float-right;
+      @extend .mr-3;
+      font-size: $font-size-base + .1rem;
+      &:after {
+        font-size: #{$font-size-base};
+        font-family: 'FontAwesome';
+        content: "\f104";
+        display: block;
+        float: left;
+        margin-right: -12px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1300px) {
+  .page-actions {
+    button {
+      width: 25%;
+    }
+  }
+}
+@media screen and (max-width: 980px) {
+  .page-actions {
+    button {
+      width: 45%;
+    }
+  }
+}
+
+.text-large {
+  font-size: $font-size-base + .5rem;
+}
+.base-text-size {
+  font-size: $font-size-base;
+}
+
+table {
+  &.table-lg {
+    td, th {
+      padding: 16px;
+      font-size: $font-size-base + .1rem;
+    }
+  }
+  &.base-text-size {
+    td {
+      font-size: inherit;
+    }
+  }
+  .fixed-layout {
+    table-layout:fixed;
+  }
+  th {
+    &.w-10 {
+      width: 10%;
+    }
+    &.w-20 {
+      width: 20%;
+    }
+  }
+
+  td {
+    .amount-input {
+      width: 100%;
+      /*    font-weight: $font-weight-light; */
+      text-align: center;
+      border: none;
+      background: transparent;
+      outline: none !important;
+      &:focus {
+        &::-webkit-input-placeholder {
+          color: transparent !important;
+        }
+        &::-moz-placeholder {
+          color: transparent !important;
+        }
+        /* FF 4-18 */
+        &::-moz-placeholder {
+          color: transparent !important;
+        }
+        /* FF 19+ */
+        &::-ms-input-placeholder {
+          color: transparent !important;
+        }
+      }
+    }
+
+    &.actual-amount {
+      padding: 0 !important;
+      input {
+        padding: 10px;
+      }
+
+      &.error {
+        input {
+          padding: 9px;
+          border: 1px solid $danger !important;
+        }
+      }
+    }
+  }
+
+}
+
+.word-break {
+  word-break: break-all;
+}
+table.table-lg.small-td {
+  td, th {
+    padding: .5em;
+  }
+}
+
+.btn.mono-width {
+  min-width: 175px;
+}
+
+#page-message {
+  z-index: 9999;
+}
+
+.gs-loading {
+  background: url(/img/spinners/loading.io.svg);
+  background-size: 200% 200%;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  font: normal normal normal 14px/1 'Arial';
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  &:before {
+    content:"\00a0\00a0\00a0\00a0";
+  }
+}
+
+.btn-shadowed {
+  box-shadow: 0 4px 4px 0 rgba(150, 150, 150, 0.23);
+  -webkit-box-shadow: 0 4px 4px 0 rgba(150, 150, 150, 0.23);
+  -moz-box-shadow: 0 4px 4px 0 rgba(150, 150, 150, 0.23);
+}
